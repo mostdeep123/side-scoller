@@ -22,9 +22,12 @@ public class TileManager : MonoBehaviour
 
     private readonly List<GameObject> activeTiles = new List<GameObject>();
 
+    [HideInInspector] public float scrollSpeedStart;
+
     async void Start()
     {
         Time.timeScale = 0;
+        scrollSpeedStart = scrollSpeed;
     }
 
     public void StartGame()

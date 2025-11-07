@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using Cysharp.Threading.Tasks;
+using System.Collections.Generic;
 
 public class GameState : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class GameState : MonoBehaviour
                 playerObj.SetTrigger("run");
                 break;
             case gameState.Hit:
+                tileManager.scrollSpeed = 0;
                 int currHealth = PlayerPrefs.GetInt("health");
                 currHealth -= 1;
                 PlayerPrefs.SetInt("health", currHealth);
@@ -51,7 +53,31 @@ public class GameState : MonoBehaviour
     
     async UniTask Respawn ()
     {
-        
+        GameObject respawnTransforms = playerObj.GetComponent<Fall>().currentTilePattern;
+        Respawn respawnInformation = respawnTransforms.GetComponent<Respawn>();
+        List<Transform> respawns = respawnInformation.respawnTiles;
+        Transform nearestRespawn = null;
+        float nearestDist = float.MaxValue;
+        Vector3 playerPos = playerObj.transform.position;
+
+        if(respawns.Count > 0)
+        {
+            foreach (var r in respawns)
+            {
+                float dist = Vector3.Distance(playerPos, r.position);
+                if (dist < nearestDist)
+                {
+                    nearestDist = dist;
+                    nearestRespawn = r;
+                }
+            }
+            if (nearestRespawn != null)
+            {
+                playerObj.transform.position = nearestRespawn.position;
+            }
+        }
+        await UniTask.Delay(1500);
+        tileManager.scrollSpeed = tileManager.scrollSpeedStart;
     }
 
 }

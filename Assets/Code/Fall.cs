@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Fall : MonoBehaviour
 {
-    private GameObject currentTilePattern;
+    [HideInInspector] public GameObject currentTilePattern;
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
@@ -13,7 +13,7 @@ public class Fall : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter (Collision2D coll)
+    public void OnCollisionEnter2D (Collision2D coll)
     {
         if(coll.transform.tag == "tile")
         {

@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 305641086}
   m_Layer: 0
   m_Name: ObjectSet1
-  m_TagString: Untagged
+  m_TagString: tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1766,7 +1766,7 @@ Transform:
   m_GameObject: {fileID: 1040866237}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.91, y: -1.26, z: 0}
+  m_LocalPosition: {x: 17.79, y: -1.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1851,7 +1851,7 @@ Transform:
   m_GameObject: {fileID: 1057453724}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.84, y: -1.26, z: 0}
+  m_LocalPosition: {x: 2.93, y: 0.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2433,9 +2433,10 @@ GameObject:
   - component: {fileID: 1718542710}
   - component: {fileID: 1718542709}
   - component: {fileID: 1718542708}
+  - component: {fileID: 1718542711}
   m_Layer: 0
   m_Name: 'FirstTile '
-  m_TagString: Untagged
+  m_TagString: tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2488,6 +2489,19 @@ Transform:
   - {fileID: 120217678}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1718542711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718542707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30187bdcf696da4b8396a99f5c08983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTiles: []
 --- !u!1 &1750501984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2673,7 @@ MonoBehaviour:
   waitStartDelay: 0
   startX: 30
   despawnX: -30
+  scrollSpeedStart: 0
 --- !u!114 &1796344124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2833,7 +2848,7 @@ GameObject:
   - component: {fileID: 2003402593}
   m_Layer: 0
   m_Name: ObjectSet1
-  m_TagString: Untagged
+  m_TagString: tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3110,7 +3125,7 @@ GameObject:
   - component: {fileID: 3974349574582975974}
   m_Layer: 0
   m_Name: ObjectSet1
-  m_TagString: Untagged
+  m_TagString: tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3646,6 +3661,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5b2b9d1a5e49a469cab91bff218449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 7
+  gravityMultiplier: 5
 --- !u!114 &5902517877500945065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3658,6 +3675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b26036a05230941829f7d1daf1ee55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTilePattern: {fileID: 0}
 --- !u!114 &5902517877500945066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3688,7 +3706,7 @@ GameObject:
   - component: {fileID: 5543867242627073910}
   m_Layer: 0
   m_Name: ObjectSet1
-  m_TagString: Untagged
+  m_TagString: tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3869,7 +3887,7 @@ GameObject:
   - component: {fileID: 8857837557438882736}
   m_Layer: 0
   m_Name: ObjectSet1
-  m_TagString: Untagged
+  m_TagString: tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
