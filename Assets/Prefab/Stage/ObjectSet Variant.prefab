@@ -574,7 +574,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7280342318107634799}
   - component: {fileID: 4639783242722562472}
-  - component: {fileID: 7082299729289350738}
   m_Layer: 0
   m_Name: ObjectSet Variant
   m_TagString: Untagged
@@ -625,20 +624,6 @@ MonoBehaviour:
   - {fileID: 4967326569189020475}
   - {fileID: 1712579574844211460}
   - {fileID: 1776924857542062158}
---- !u!114 &7082299729289350738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8417030927948653842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c30187bdcf696da4b8396a99f5c08983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnTiles:
-  - {fileID: 2330225430064944232}
 --- !u!1 &8818153676925447821
 GameObject:
   m_ObjectHideFlags: 0

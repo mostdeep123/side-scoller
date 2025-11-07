@@ -2409,7 +2409,6 @@ GameObject:
   - component: {fileID: 1718542710}
   - component: {fileID: 1718542709}
   - component: {fileID: 1718542708}
-  - component: {fileID: 1718542711}
   m_Layer: 0
   m_Name: 'FirstTile '
   m_TagString: tile
@@ -2465,19 +2464,6 @@ Transform:
   - {fileID: 120217678}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1718542711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718542707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c30187bdcf696da4b8396a99f5c08983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnTiles: []
 --- !u!1 &1750501984
 GameObject:
   m_ObjectHideFlags: 0
@@ -3310,6 +3296,7 @@ GameObject:
   - component: {fileID: 5902517877500945063}
   - component: {fileID: 5902517877500945066}
   - component: {fileID: 5902517877500945067}
+  - component: {fileID: 5902517877500945068}
   m_Layer: 0
   m_Name: Character1
   m_TagString: Untagged
@@ -3328,7 +3315,6 @@ GameObject:
   - component: {fileID: 2491044238178363010}
   - component: {fileID: 575014948118387525}
   - component: {fileID: 4018906176904694615}
-  - component: {fileID: 4018906176904694616}
   m_Layer: 0
   m_Name: FirstTile
   m_TagString: tile
@@ -3395,21 +3381,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 1796344123}
---- !u!114 &4018906176904694616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3699216996000346111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c30187bdcf696da4b8396a99f5c08983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnTiles:
-  - {fileID: 1057453725}
-  - {fileID: 1040866238}
 --- !u!4 &4075034993289459520
 Transform:
   m_ObjectHideFlags: 0
@@ -3673,6 +3644,19 @@ MonoBehaviour:
   offscreenX: -10
   respawnDelay: 1.5
   respawnPosition: {x: -6, y: 0}
+--- !u!114 &5902517877500945068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3676395340844241943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4cf90ed624e7447b1f399362f90674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: 0
 --- !u!1 &6014051615514961560
 GameObject:
   m_ObjectHideFlags: 0

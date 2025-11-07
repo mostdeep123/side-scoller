@@ -725,8 +725,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5616482736573775890}
   - component: {fileID: 7537596202861034965}
-  - component: {fileID: 6387849317041352135}
-  - component: {fileID: 8486797812110524640}
   m_Layer: 0
   m_Name: ObjectSet
   m_TagString: Untagged
@@ -775,30 +773,3 @@ MonoBehaviour:
   - {fileID: 5135771474848151810}
   - {fileID: 8899232640084097780}
   - {fileID: 1867998524089695889}
---- !u!114 &6387849317041352135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6644626401008781679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 662247f0e2d554043a04704767744f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tile: {fileID: 0}
---- !u!114 &8486797812110524640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6644626401008781679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c30187bdcf696da4b8396a99f5c08983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnTiles:
-  - {fileID: 5022939926693705494}

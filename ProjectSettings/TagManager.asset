@@ -6,6 +6,7 @@ TagManager:
   tags:
   - dead
   - tile
+  - coin
   layers:
   - Default
   - TransparentFX
