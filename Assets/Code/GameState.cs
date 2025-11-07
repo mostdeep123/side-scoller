@@ -1,9 +1,14 @@
 using UnityEngine;
+using System;
+using Cysharp.Threading.Tasks;
 
 public class GameState : MonoBehaviour
 {
+    [System.Serializable]
     public enum gameState
     {
+        Start,
+        Hit,
         Run,
         End
     };
@@ -11,10 +16,11 @@ public class GameState : MonoBehaviour
     public gameState state;
 
     [Header("Properties")]
+    public TileManager tileManager;
     public Animator playerObj;
     public GameObject popUpEnd;
 
-    
+
     public static GameState game;
 
     void Awake()
@@ -22,15 +28,30 @@ public class GameState : MonoBehaviour
         game = this;
     }
 
-    public void UpdateState ()
+    public async void UpdateState()
     {
-        switch(state)
+        switch (state)
         {
             case gameState.Run:
                 playerObj.SetTrigger("run");
                 break;
+            case gameState.Hit:
+                int currHealth = PlayerPrefs.GetInt("health");
+                currHealth -= 1;
+                PlayerPrefs.SetInt("health", currHealth);
+                playerObj.GetComponent<Health>().HealthUpdate(PlayerPrefs.GetInt("health"));
+                state = gameState.Run;
+                await Respawn();
+                break;
             case gameState.End:
+                popUpEnd.SetActive(true);
                 break;
         }
     }
+    
+    async UniTask Respawn ()
+    {
+        
+    }
+
 }

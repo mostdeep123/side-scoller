@@ -7,6 +7,6 @@ public class MoveLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += Vector3.left * tile.scrollSpeed * Time.deltaTime;
+        if(tile != null) this.transform.position += Vector3.left * tile.scrollSpeed * Time.deltaTime;
     }
 }

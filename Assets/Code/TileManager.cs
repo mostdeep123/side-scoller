@@ -7,6 +7,9 @@ public class TileManager : MonoBehaviour
     [Header("Tile Prefabs")]
     public List<GameObject> tilePrefabs = new List<GameObject>();
 
+    [Header("Character Scriptable Objects")]
+    public List<Character> characterDatas = new List<Character>();
+
     [Header("Settings")]
     public float scrollSpeed = 5f;
     public int poolSize = 6;

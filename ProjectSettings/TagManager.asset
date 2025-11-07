@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - dead
+  - tile
   layers:
   - Default
   - TransparentFX
