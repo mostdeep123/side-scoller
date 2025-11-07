@@ -10,6 +10,8 @@ public class Coin : MonoBehaviour
         {
             coin++;
             Coll.transform.gameObject.SetActive(false);
+            EndPopUp endPopup = GameState.game.popUpEnd.GetComponent<EndPopUp>();
+            endPopup.ShowCoinText(coin);
         }
     }
 }

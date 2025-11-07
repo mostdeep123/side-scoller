@@ -57,7 +57,7 @@ public class TileManager : MonoBehaviour
 
     private async UniTask MoveTilesLoop()
     {
-        while (this != null && gameObject.activeInHierarchy)
+        while (this != null && gameObject.activeInHierarchy && GameState.game.state != GameState.gameState.End)
         {
             float delta = Time.deltaTime * scrollSpeed;
 

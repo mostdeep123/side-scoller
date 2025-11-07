@@ -29,6 +29,12 @@ public class PlayerFallHandler : MonoBehaviour
         float savedSpeed = tileManager.scrollSpeed;
         tileManager.scrollSpeed = 0f;
 
+        if (PlayerPrefs.GetInt("health") > 0)
+        {
+            GameState.game.state = GameState.gameState.Hit;
+            GameState.game.UpdateState();
+        }
+
         var rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = Vector2.zero;
         rb.simulated = false;
@@ -36,6 +42,11 @@ public class PlayerFallHandler : MonoBehaviour
         // Delay
         await UniTask.Delay((int)(respawnDelay * 1000));
 
+        if (PlayerPrefs.GetInt("health") > 0)
+        {
+            GameState.game.state = GameState.gameState.Run;
+            GameState.game.UpdateState();
+        }
         // Respwn player in early position
         transform.position = respawnPosition;
         rb.simulated = true;

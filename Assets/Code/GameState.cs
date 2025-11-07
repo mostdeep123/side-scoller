@@ -40,10 +40,11 @@ public class GameState : MonoBehaviour
                 currHealth -= 1;
                 PlayerPrefs.SetInt("health", currHealth);
                 playerObj.GetComponent<Health>().HealthUpdate(PlayerPrefs.GetInt("health"));
-                state = gameState.Run;
                 break;
             case gameState.End:
                 popUpEnd.SetActive(true);
+                tileManager.scrollSpeed = 0;
+                playerObj.gameObject.SetActive(false);
                 break;
         }
     }
