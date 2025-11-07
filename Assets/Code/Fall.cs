@@ -12,12 +12,4 @@ public class Fall : MonoBehaviour
             GameState.game.UpdateState();
         }
     }
-
-    public void OnCollisionEnter2D (Collision2D coll)
-    {
-        if(coll.transform.tag == "tile")
-        {
-            currentTilePattern = coll.gameObject.transform.parent.gameObject;
-        }
-    }
 }

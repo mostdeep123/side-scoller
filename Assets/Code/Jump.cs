@@ -8,23 +8,32 @@ public class Jump : MonoBehaviour
     public float gravityMultiplier = 5f;
 
     private Rigidbody2D rb;
+    private Animator anim;
     private bool isGrounded;
+    private bool jumpQueued; 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
-    void Update ()
+    void Update()
     {
-        if (isGrounded && Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
-            JumpAction();
-        } 
+            anim.SetTrigger("jump");
+            jumpQueued = true;
+        }
     }
 
     void FixedUpdate()
     {
+        if (jumpQueued)
+        {
+            JumpAction();
+            jumpQueued = false;
+        }
         if (rb.linearVelocity.y < 0)
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (gravityMultiplier - 1) * Time.fixedDeltaTime;
@@ -35,13 +44,14 @@ public class Jump : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        isGrounded = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("tile"))
         {
-            this.GetComponent<Animator>().SetTrigger("run");
+            anim.SetTrigger("run");
             isGrounded = true;
         }
     }
@@ -50,7 +60,6 @@ public class Jump : MonoBehaviour
     {
         if (collision.transform.CompareTag("tile"))
         {
-            this.GetComponent<Animator>().SetTrigger("jump");
             isGrounded = false;
         }
     }

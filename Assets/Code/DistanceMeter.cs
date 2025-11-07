@@ -32,6 +32,8 @@ public class DistanceMeter : MonoBehaviour
             await UniTask.Yield(PlayerLoopTiming.Update);
         }
 
+        if (currentDistance >= maxCurrentDistance) GameState.game.state = GameState.gameState.End;
+
         // Make Sure Fill is full
         if (content != null)
             content.fillAmount = 1f;

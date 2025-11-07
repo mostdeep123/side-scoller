@@ -18,5 +18,11 @@ public class Health : MonoBehaviour
     public void HealthUpdate (int currentHealth)
     {
         healthLists[currentHealth].enabled = false;
+        if (currentHealth <= 0)
+        {
+            GameState.game.state = GameState.gameState.End;
+            GameState.game.UpdateState();
+        }
+
     }
 }
