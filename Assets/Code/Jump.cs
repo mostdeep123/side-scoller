@@ -10,7 +10,8 @@ public class Jump : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private bool isGrounded;
-    private bool jumpQueued; 
+    private bool jumpQueued;
+    private bool backRun;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class Jump : MonoBehaviour
         {
             anim.SetTrigger("jump");
             jumpQueued = true;
+            backRun = true;
         }
     }
 
@@ -49,9 +51,21 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("tile"))
+        if (collision.transform.CompareTag("tile") && !isGrounded)
         {
-            anim.SetTrigger("run");
+            isGrounded = true;
+            if (backRun)
+            {
+                backRun = false;
+                anim.SetTrigger("run");
+            }
+        }
+    }
+
+    private void OnCollisionStay2D (Collision2D coll)
+    {
+        if(coll.transform.CompareTag("tile"))
+        {
             isGrounded = true;
         }
     }

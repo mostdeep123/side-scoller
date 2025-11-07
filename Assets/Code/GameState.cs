@@ -34,7 +34,6 @@ public class GameState : MonoBehaviour
         switch (state)
         {
             case gameState.Run:
-                playerObj.SetTrigger("run");
                 break;
             case gameState.Hit:
                 int currHealth = PlayerPrefs.GetInt("health");

@@ -32,6 +32,7 @@ public class TileManager : MonoBehaviour
 
     public void StartGame()
     {
+        GameState.game.playerObj.SetTrigger("run");
         StartGameAsync();
     }
     
