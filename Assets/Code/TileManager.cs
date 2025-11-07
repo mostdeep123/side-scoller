@@ -11,6 +11,7 @@ public class TileManager : MonoBehaviour
     public float scrollSpeed = 5f;
     public int poolSize = 6;
     public float tileWidth = 10f;
+    public int waitStartDelay;
 
     [Header("Spawn Settings")]
     public float startX = 0f;
@@ -23,9 +24,18 @@ public class TileManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void StartGame ()
+    public void StartGame()
+    {
+        StartGameAsync();
+    }
+    
+    async UniTask StartGameAsync ()
     {
         Time.timeScale = 1;
+        GameState.game.state = GameState.gameState.Run;
+        GameState.game.UpdateState();
+
+        await UniTask.Delay(waitStartDelay);
 
         // Init tiles to pool size
         for (int i = 0; i < poolSize; i++)
