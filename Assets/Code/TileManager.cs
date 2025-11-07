@@ -20,6 +20,13 @@ public class TileManager : MonoBehaviour
 
     async void Start()
     {
+        Time.timeScale = 0;
+    }
+
+    public void StartGame ()
+    {
+        Time.timeScale = 1;
+
         // Init tiles to pool size
         for (int i = 0; i < poolSize; i++)
         {
@@ -53,7 +60,7 @@ public class TileManager : MonoBehaviour
 
                     float maxX = GetRightMostX();
                     tile.transform.position = new Vector3(maxX + tileWidth, pos.y, pos.z);
-                    
+
                     // swap tile to different things
                     var randomPrefab = tilePrefabs[Random.Range(0, tilePrefabs.Count)];
                     var sr = tile.GetComponent<SpriteRenderer>();
