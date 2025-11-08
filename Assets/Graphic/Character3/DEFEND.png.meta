@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 962545364c17f6648aa3cdbed6980a05
+guid: ff24a8c4444f9854ea45911174021dbb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _Jump_0
+      name: DEFEND_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 0
-        width: 25
-        height: 38
+        x: 36
+        y: 22
+        width: 23
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba10c78fb0a62124ba9365fbd9196e82
-      internalID: -48421010
+      spriteID: 576432057528dc744ab0014c1db7bd4a
+      internalID: 2000876819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Jump_1
+      name: DEFEND_1
       rect:
         serializedVersion: 2
-        x: 164
-        y: 0
-        width: 25
-        height: 38
+        x: 127
+        y: 22
+        width: 31
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecb52bdc9c39b0449b2644b22dba56cb
-      internalID: 572032720
+      spriteID: 50f6cdef1cbc6684e8a79ddff6f66632
+      internalID: -840144807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Jump_2
+      name: DEFEND_2
       rect:
         serializedVersion: 2
-        x: 284
-        y: 0
-        width: 25
-        height: 38
+        x: 221
+        y: 22
+        width: 33
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +156,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33ca992877bd3de458e78c69469803ce
-      internalID: 1006020549
+      spriteID: 3532c89bc6fa309479fd64494d3293b4
+      internalID: -29908036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEFEND_3
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 22
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e0c40e0cb33954a94da9645d599e69
+      internalID: -100870344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEFEND_4
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 22
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e9f63464c8f2e4087a7fae658f8794
+      internalID: -64966011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEFEND_5
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 41
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9630a7b98551f39409144fd32e9aa500
+      internalID: 1702976135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEFEND_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 22
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874c2494862f53d4ab8445ef9e962fb2
+      internalID: -867564181
       vertices: []
       indices: 
       edges: []
@@ -166,7 +254,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c0c30df7d5035f74ba26d7ec12317b66
+    spriteID: f28b964fc8ce7964aaa7e67d11c532dc
     internalID: 0
     vertices: []
     indices: 
@@ -176,9 +264,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      _Jump_0: -48421010
-      _Jump_1: 572032720
-      _Jump_2: 1006020549
+      DEFEND_0: 2000876819
+      DEFEND_1: -840144807
+      DEFEND_2: -29908036
+      DEFEND_3: -100870344
+      DEFEND_4: -64966011
+      DEFEND_5: 1702976135
+      DEFEND_6: -867564181
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
