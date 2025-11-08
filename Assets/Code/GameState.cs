@@ -31,6 +31,11 @@ public class GameState : MonoBehaviour
         game = this;
     }
 
+    void Update ()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene(0);
+    }
+
     void Start ()
     {
         playerObj.runtimeAnimatorController = GameState.game.tileManager.characterDatas[PlayerPrefs.GetInt("select")].characterAnimator;

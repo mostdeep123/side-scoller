@@ -2235,7 +2235,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Press W to Jump
 
-    Press S to Slide'
+    Press S to Slide
+
+    Press ESC to back'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2342,7 +2344,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: f1a8caf454cefd24f8a3ad09ecd6cadf, type: 3}
+  m_Resource: {fileID: 8300000, guid: 40033afac35898b4c9c3527ec38f8de9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3727,7 +3729,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63d3fe22e5ce7a24783f6c6a5b66eb36, type: 2}
   - {fileID: 11400000, guid: 1917513ec1cb0e443a5dd6f4a9bb8c3a, type: 2}
   scrollSpeed: 7
-  poolSize: 6
+  poolSize: 10
   tileWidth: 22
   waitStartDelay: 0
   startX: 30
@@ -4267,7 +4269,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: f1a8caf454cefd24f8a3ad09ecd6cadf, type: 3}
+  m_Resource: {fileID: 8300000, guid: d701bb5f7b72b8b4c98efd4cb96d95c3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5275,11 +5277,13 @@ MonoBehaviour:
   obstacleReachSpecialItem: 6
   invulnerablityReachSpecialItem: 7
   magnetSFX: {fileID: 490119515}
-  obstacleSFX: {fileID: 0}
-  invSFX: {fileID: 0}
+  obstacleSFX: {fileID: 2019795876}
+  invSFX: {fileID: 939681974}
   skillDuration: 3
   skillActive: 0
   magnetActive: 0
+  obstacleActive: 0
+  invActive: 0
 --- !u!114 &5902517877500945072
 MonoBehaviour:
   m_ObjectHideFlags: 0

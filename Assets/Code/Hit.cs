@@ -10,24 +10,29 @@ public class Hit : MonoBehaviour
     private SpriteRenderer sr;
     private Color originalColor;
     private bool isHit = false;
+    private Skill skill;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        skill = GetComponent<Skill>();
         originalColor = sr.color;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("obstacle"))
+        if(!skill.invActive && !skill.obstacleActive)
         {
-            GameState.game.state = GameState.gameState.Hit;
-            GameState.game.UpdateState();
-        }
+            if(collision.CompareTag("obstacle"))
+            {
+                GameState.game.state = GameState.gameState.Hit;
+                GameState.game.UpdateState();
+            }
 
-        if (collision.CompareTag("obstacle") && !isHit)
-        {
-            _ = FlashRedAsync();
+            if (collision.CompareTag("obstacle") && !isHit)
+            {
+                _ = FlashRedAsync();
+            }
         }
     }
 

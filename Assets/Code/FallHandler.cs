@@ -11,14 +11,22 @@ public class PlayerFallHandler : MonoBehaviour
     public Vector2 respawnPosition = new Vector2(-6f, 0f);
 
     private bool isRespawning;
+    private Skill skill;
+
+    void Start ()
+    {
+        skill = this.GetComponent<Skill>();
+    }
 
     void Update()
     {
+        
         if (!isRespawning && 
             (transform.position.y < offscreenY || transform.position.x < offscreenX))
         {
             _ = HandleRespawnAsync();
         }
+      
     }
 
     private async UniTask HandleRespawnAsync()
@@ -29,7 +37,7 @@ public class PlayerFallHandler : MonoBehaviour
         float savedSpeed = tileManager.scrollSpeed;
         tileManager.scrollSpeed = 0f;
 
-        if (PlayerPrefs.GetInt("health") > 0)
+        if (PlayerPrefs.GetInt("health") > 0 && !skill.invActive)
         {
             GameState.game.state = GameState.gameState.Hit;
             GameState.game.UpdateState();
@@ -46,12 +54,13 @@ public class PlayerFallHandler : MonoBehaviour
         {
             GameState.game.state = GameState.gameState.Run;
             GameState.game.UpdateState();
-        }
-        // Respwn player in early position
-        transform.position = respawnPosition;
-        rb.simulated = true;
-        tileManager.scrollSpeed = savedSpeed;
+            // Respwn player in early position
+            transform.position = respawnPosition;
+            rb.simulated = true;
+            tileManager.scrollSpeed = savedSpeed;
 
-        isRespawning = false;
+            isRespawning = false;
+        }
+       
     }
 }
