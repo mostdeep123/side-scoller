@@ -8,6 +8,8 @@ TagManager:
   - tile
   - coin
   - obstacle
+  - special
+  - character
   layers:
   - Default
   - TransparentFX
