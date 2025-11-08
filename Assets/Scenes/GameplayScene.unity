@@ -5244,7 +5244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slideDuration: 1
   slideSpeedMultiplier: 1.5
-  slideColliderSize: {x: 1, y: 0.06572093}
+  slideColliderSize: {x: 0.15, y: 0.06572093}
   slideColliderOffset: {x: 0, y: -0.0344438}
 --- !u!114 &5902517877500945070
 MonoBehaviour:

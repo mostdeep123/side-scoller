@@ -42,7 +42,7 @@ public class SelectCharacterManager : MonoBehaviour
     
     void InputChangeIndex ()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && !isAnimating)
         {
             if (characterSelectIndex < maxCharacterIndex)
             {
@@ -53,7 +53,7 @@ public class SelectCharacterManager : MonoBehaviour
                 PlayerPrefs.SetInt("select", characterSelectIndex);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && !isAnimating)
         {
             if (characterSelectIndex > 0)
             {
