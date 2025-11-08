@@ -27,6 +27,8 @@ public class Hit : MonoBehaviour
 
     private async UniTask FlashRedAsync()
     {
+        GameState.game.state = GameState.gameState.Hit;
+        GameState.game.UpdateState();
         isHit = true;
         sr.color = hitColor;
         await UniTask.Delay((int)(hitDuration * 1000));
