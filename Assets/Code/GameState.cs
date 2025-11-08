@@ -2,6 +2,8 @@ using UnityEngine;
 using System;
 using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour
 {
@@ -27,6 +29,11 @@ public class GameState : MonoBehaviour
     void Awake()
     {
         game = this;
+    }
+
+    void Start ()
+    {
+        playerObj.runtimeAnimatorController = GameState.game.tileManager.characterDatas[PlayerPrefs.GetInt("select")].characterAnimator;
     }
 
     public async void UpdateState()

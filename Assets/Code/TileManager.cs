@@ -27,6 +27,7 @@ public class TileManager : MonoBehaviour
     async void Start()
     {
         Time.timeScale = 0;
+        scrollSpeed = characterDatas[PlayerPrefs.GetInt("select")].speed;
         scrollSpeedStart = scrollSpeed;
     }
 

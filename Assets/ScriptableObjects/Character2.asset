@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a03988891930840ab765e32776c87f, type: 3}
   m_Name: Character2
   m_EditorClassIdentifier: 
-  characterObject: {fileID: 0}
+  characterAnimator: {fileID: 9100000, guid: 3ac16bb9d0d7bf54aac2c269edc22978, type: 2}
+  coin: {fileID: 7046062866734527953, guid: bc9259724b0fe8848bec63df95ae1f53, type: 3}
   health: 3
   speed: 6
   skillType: obstacle

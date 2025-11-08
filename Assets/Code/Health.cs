@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
 
     void Start ()
     {
-        characterHealth = GameState.game.tileManager.characterDatas[0].health;
+        characterHealth = GameState.game.tileManager.characterDatas[PlayerPrefs.GetInt("select")].health;
         PlayerPrefs.SetInt("health", characterHealth);
     }
 

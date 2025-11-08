@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
-
+using UnityEngine.SceneManagement;
 
 public class SelectCharacterManager : MonoBehaviour
 {
@@ -22,6 +22,10 @@ public class SelectCharacterManager : MonoBehaviour
     public string characterSelectionKey;
     public List<string> charactersKey = new List<string>();
 
+    [Header("Audio Source")]
+    public AudioSource sfx;
+    public AudioSource BGM;
+
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,22 +44,28 @@ public class SelectCharacterManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if(characterSelectIndex < maxCharacterIndex)
+            if (characterSelectIndex < maxCharacterIndex)
             {
+                sfx.Play();
                 characterSelectIndex++;
                 AnimateSelection(moveDistance, false);
                 KeyShiftRight();
+                PlayerPrefs.SetInt("select", characterSelectIndex);
             }
         }
-        else if(Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if(characterSelectIndex > 0)
+            if (characterSelectIndex > 0)
             {
+                sfx.Play();
                 characterSelectIndex--;
                 AnimateSelection(-moveDistance, true);
                 KeyShiftLeft();
+                PlayerPrefs.SetInt("select", characterSelectIndex);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Return)) SceneManager.LoadSceneAsync(1);
     }
 
      void AnimateSelection(float offset, bool toLeft)
@@ -122,6 +132,7 @@ public class SelectCharacterManager : MonoBehaviour
 
         characterSelectionKey = charactersKey[1];
         PlayerPrefs.SetString("character", characterSelectionKey);
+
     }
 
     void KeyShiftLeft ()

@@ -11,6 +11,8 @@ public class CoinSpawn : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        coinObject = GameState.game.tileManager.characterDatas[PlayerPrefs.GetInt("select")].coin;
+
         for (int i = 0; i < coinSpawnTransforms.Count; i++)
         {
             GameObject coin = Instantiate(coinObject);
